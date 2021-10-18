@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-printers-and-papers-printer-e",
+  "editForm": "i-i-s-printers-and-papers-printer-e",
+  "external": false,
+  "caption": "Printer",
+  "name": "IISPrintersAndPapersPrinterL",
+  "className": "PrinterL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-printers-and-papers-printer",
+      "modelProjection": "PrinterL"
+    }
+  ]
+}

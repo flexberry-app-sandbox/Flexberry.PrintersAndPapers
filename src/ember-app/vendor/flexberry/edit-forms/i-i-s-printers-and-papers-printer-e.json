@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "PrinterType",
+      "projection": "PrinterTypeL",
+      "detailModelName": null
+    },
+    {
+      "master": "paperType",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "PrinterPaper.PaperType",
+      "projection": "PaperTypeL",
+      "detailModelName": "i-i-s-printers-and-papers-printer-paper"
+    }
+  ],
+  "external": false,
+  "caption": "Printer",
+  "name": "IISPrintersAndPapersPrinterE",
+  "className": "PrinterE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-printers-and-papers-printer",
+      "modelProjection": "PrinterE"
+    }
+  ]
+}

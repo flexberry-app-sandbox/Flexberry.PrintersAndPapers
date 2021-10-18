@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-printers-and-papers-paper-type-e",
+  "editForm": "i-i-s-printers-and-papers-paper-type-e",
+  "external": false,
+  "caption": "Paper type",
+  "name": "IISPrintersAndPapersPaperTypeL",
+  "className": "PaperTypeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-printers-and-papers-paper-type",
+      "modelProjection": "PaperTypeL"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+﻿{
+  "name": "IISPrintersAndPapersPrinterPaper",
+  "modelName": "i-i-s-printers-and-papers-printer-paper",
+  "className": "PrinterPaper",
+  "nameSpace": "IIS.PrintersAndPapers",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "paperType",
+      "relatedTo": "i-i-s-printers-and-papers-paper-type",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "printer",
+      "relatedTo": "i-i-s-printers-and-papers-printer",
+      "inverse": "printerPaper"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PrinterPaperE",
+      "modelName": "i-i-s-printers-and-papers-printer-paper",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "PaperType",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Paper type",
+          "name": "paperType",
+          "relatedTo": "i-i-s-printers-and-papers-paper-type",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,100 @@
+<h3 class="ui header">{{t "forms.i-i-s-printers-and-papers-printer-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationModel "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-printers-and-papers-printer-e.name-caption")
+      data-test-i-i-s-printers-and-papers-printer-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.serialNumber
+      class=(if (v-get validationModel "serialNumber" "isInvalid") "error")
+      label=(t "forms.i-i-s-printers-and-papers-printer-e.serialNumber-caption")
+      data-test-i-i-s-printers-and-papers-printer-e-serialNumber=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "serialNumber" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-printers-and-papers-printer-e.ready-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.ready
+      class=(if (v-get validationModel "ready" "isInvalid") "error")
+      data-test-i-i-s-printers-and-papers-printer-e-ready=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ready" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-printers-and-papers-printer-e.dateOfManufacture-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.dateOfManufacture
+      class=(if (v-get validationModel "dateOfManufacture" "isInvalid") "error")
+      data-test-i-i-s-printers-and-papers-printer-e-dateOfManufacture=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "dateOfManufacture" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-printers-and-papers-printer-e.printerType-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.printerType
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="printerType"
+      projection="PrinterTypeL"
+      title=(t "forms.i-i-s-printers-and-papers-printer-e.printerType-caption")
+      readonly=readonly
+      componentName="printerTypeLookup"
+      class=(if (v-get validationModel "printerType" "isInvalid") "error")
+      data-test-i-i-s-printers-and-papers-printer-e-printerType=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "printerType" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-printers-and-papers-printer-e.printerPaper-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="printerPaperGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.printerPaper
+      content=model.printerPaper
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "printerPaper" "isInvalid") "error")
+      data-test-i-i-s-printers-and-papers-printer-e-printerPaper=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "printerPaper" "message")}}
+  </div>
+</form>

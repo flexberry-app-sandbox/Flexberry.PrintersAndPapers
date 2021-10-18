@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Paper type",
+  "name": "IISPrintersAndPapersPaperTypeE",
+  "className": "PaperTypeE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-printers-and-papers-paper-type",
+      "modelProjection": "PaperTypeE"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Printers and papers",
+  "applicationTitle": "Printers and papers",
+  "items": [
+    {
+      "link": null,
+      "menuName": "printers-and-papers",
+      "caption": "PrintersAndPapers",
+      "title": "PrintersAndPapers",
+      "children": [
+        {
+          "link": "i-i-s-printers-and-papers-printer-type-l",
+          "menuName": null,
+          "caption": "Printer type",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-printers-and-papers-paper-type-l",
+          "menuName": null,
+          "caption": "Paper type",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-printers-and-papers-printer-l",
+          "menuName": null,
+          "caption": "Printer",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
